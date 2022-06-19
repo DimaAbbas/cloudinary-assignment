@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.scss';
 import NewTag from './view/components/newTag/NewTag';
 import Tags from './view/components/tagsList/Tags';
+import PhotosList from './view/components/photosList/PhotosList';
+import AssignedPhotos from './view/components/assignedPhotos/AssignedPhotos';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         <Tags />
       </div>
       <div className='column2'>
-        <p>Hiii</p>
+        <PhotosList />
+        <AssignedPhotos />
       </div>
     </div>
   );
