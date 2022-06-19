@@ -15,7 +15,8 @@
     {
       "id": 4,
       "url": "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU"
-    },{
+    },
+    {
       "id": 5,
       "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
     },
@@ -44,20 +45,50 @@
     {
       "id": 1,
       "name": "tag1",
-      "color": "red",
+      "color": "4b8d06",
       "photos": []
     },
     {
       "id": 2,
       "name": "tag2",
-      "color": "red",
+      "color": "4b8d06",
       "photos": []
     },
     {
       "id": 3,
       "name": "tag3",
-      "color": "red",
+      "color": "4b8d06",
       "photos": []
+    },
+    {
+      "name": "tag4",
+      "color": "ff9eef",
+      "photos": [],
+      "id": 4
+    },
+    {
+      "name": "tag5",
+      "color": "4b8d06",
+      "photos": [],
+      "id": 5
+    },
+    {
+      "name": "tag7",
+      "color": "5ca7cb",
+      "photos": [],
+      "id": 6
+    },
+    {
+      "name": "tag8",
+      "color": "d97b21",
+      "photos": [],
+      "id": 7
+    },
+    {
+      "name": "tag9",
+      "color": "7d1395",
+      "photos": [],
+      "id": 8
     }
   ]
 }

@@ -27,7 +27,7 @@ function AssignedPhotos() {
             {tags.map((tag:any, index:number) => {
                 return(
                     <div key={index} className='tagInfo'>
-                        <p className='tagName'>{tag.name}</p>
+                        <p className='tagName' style={{"backgroundColor":`${"#"+tag.color}`}}>{tag.name}</p>
                         {tag.photos.map((photo:any, index_:number) => {
                             return(
                                 <div className='tagPhotos'>
