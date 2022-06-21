@@ -2,52 +2,63 @@
   "images": [
     {
       "id": 1,
-      "url": "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
+      "url": "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
+      "tags": []
     },
     {
       "id": 2,
-      "url": "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+      "url": "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
+      "tags": [
+        "road"
+      ]
     },
     {
       "id": 3,
-      "url": "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U"
+      "url": "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
+      "tags": [
+        "tree",
+        "cloud"
+      ]
     },
     {
       "id": 4,
-      "url": "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU"
+      "url": "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU",
+      "tags": []
     },
     {
       "id": 5,
-      "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
+      "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4",
+      "tags": []
     },
     {
       "id": 6,
-      "url": "https://i.picsum.photos/id/1072/536/354.jpg?hmac=XK9PQuG5aq-UDkAXJUgmpkv2lfcAh0sAFartipNOF1o"
+      "url": "https://i.picsum.photos/id/1072/536/354.jpg?hmac=XK9PQuG5aq-UDkAXJUgmpkv2lfcAh0sAFartipNOF1o",
+      "tags": []
     },
     {
       "id": 7,
-      "url": "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
+      "url": "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
+      "tags": []
     },
     {
       "id": 8,
-      "url": "https://i.picsum.photos/id/1028/536/354.jpg?hmac=iEDY4oPIUfc9-V66B4UopLvMOW8P1RKKhDT72mtsHqM"
+      "url": "https://i.picsum.photos/id/1028/536/354.jpg?hmac=iEDY4oPIUfc9-V66B4UopLvMOW8P1RKKhDT72mtsHqM",
+      "tags": []
     },
     {
       "id": 9,
-      "url": "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA"
+      "url": "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA",
+      "tags": [
+        "book"
+      ]
     },
     {
       "id": 10,
-      "url": "https://i.picsum.photos/id/390/536/354.jpg?hmac=GaQWXXY--w1LTn0MSMeoLh9gQ7BkIHFkWkyXSMImXFE"
+      "url": "https://i.picsum.photos/id/390/536/354.jpg?hmac=GaQWXXY--w1LTn0MSMeoLh9gQ7BkIHFkWkyXSMImXFE",
+      "tags": []
     }
   ],
   "tags": [
-    {
-      "name": "book",
-      "color": "a806c6",
-      "photos": [],
-      "id": 4
-    },
     {
       "name": "cloud",
       "color": "40d8ae",
@@ -57,7 +68,9 @@
     {
       "name": "road",
       "color": "e9df6c",
-      "photos": [],
+      "photos": [
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+      ],
       "id": 6
     },
     {
@@ -85,9 +98,11 @@
       "id": 11
     },
     {
-      "name": "tag5",
-      "color": "52603f",
-      "photos": [],
+      "name": "book",
+      "color": "07c5c1",
+      "photos": [
+        "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA"
+      ],
       "id": 12
     }
   ]
