@@ -43,52 +43,52 @@
   ],
   "tags": [
     {
-      "id": 1,
-      "name": "tag1",
-      "color": "4b8d06",
-      "photos": []
-    },
-    {
-      "id": 2,
-      "name": "tag2",
-      "color": "4b8d06",
-      "photos": []
-    },
-    {
-      "id": 3,
-      "name": "tag3",
-      "color": "4b8d06",
-      "photos": []
-    },
-    {
-      "name": "tag4",
-      "color": "ff9eef",
+      "name": "book",
+      "color": "a806c6",
       "photos": [],
       "id": 4
     },
     {
-      "name": "tag5",
-      "color": "4b8d06",
+      "name": "cloud",
+      "color": "40d8ae",
       "photos": [],
       "id": 5
     },
     {
-      "name": "tag7",
-      "color": "5ca7cb",
+      "name": "road",
+      "color": "e9df6c",
       "photos": [],
       "id": 6
     },
     {
-      "name": "tag8",
-      "color": "d97b21",
+      "name": "camera",
+      "color": "92de3d",
       "photos": [],
       "id": 7
     },
     {
-      "name": "tag9",
-      "color": "7d1395",
+      "name": "tree",
+      "color": "0f59ca",
       "photos": [],
-      "id": 8
+      "id": 9
+    },
+    {
+      "name": "tea",
+      "color": "6ad2bf",
+      "photos": [],
+      "id": 10
+    },
+    {
+      "name": "car",
+      "color": "dc9aa8",
+      "photos": [],
+      "id": 11
+    },
+    {
+      "name": "tag5",
+      "color": "52603f",
+      "photos": [],
+      "id": 12
     }
   ]
 }

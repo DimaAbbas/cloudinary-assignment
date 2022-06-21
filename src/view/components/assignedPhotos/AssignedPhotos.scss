@@ -1,0 +1,46 @@
+.AssignedPhotos{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(4, 24%);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid darkblue;
+
+    .tagBox{
+        border: 2px solid #8b008b;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        
+        .tagName{
+            height: 25px;
+            p{
+                margin: auto 5px;
+            }
+        }
+
+        .tagPhotos{
+            width: 100%;
+            height: 200px; //??
+            display: flex;
+            flex-direction: column;
+            gap: 1px; //??
+            align-items: center;
+    
+            .photo{
+                border: 0.2px dotted forestgreen;
+                width: 95%;
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                img{
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

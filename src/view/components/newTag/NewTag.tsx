@@ -8,12 +8,12 @@ function NewTag() {
     const [input, setInput] = useState("");
 
     const addTag = () => {
-        console.log(input);
         try {
             const response = axios.post('http://localhost:3004/tags', {"name" : input, "color": Math.random().toString(16).substr(-6), "photos": []});
-            if(response){
-                console.log(response);
-            }
+            setInput("");
+            // if(response){
+            //     console.log(response);
+            // }
         } catch (error) {
             console.log(error);
         }

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
 import './Tags.scss';
 
 function Tags() {
@@ -7,17 +8,33 @@ function Tags() {
 
     useEffect(() => {
         getTags();
-    }, []);
+    }, [tags]);
 
-    async function getTags(){
+    async function getTags() {
         try {
             const response = await axios.get('http://localhost:3004/tags');
-            if(response){
+            if (response) {
                 setTags(response.data);
-                console.log(response);
+                //console.log(response);
             }
         } catch (error) {
             console.log(error)
+        }
+    }
+
+    function handleTagRemove(tagName: any) {
+        console.log(tagName);
+        try {
+            tags.filter(async (tag: any) => {
+                if (tag.name === tagName) {
+                    const response = await axios.delete(`http://localhost:3004/tags/${tag.id}`);
+                    if (response) {
+                        console.log(response.data);
+                    }
+                }
+            });
+        } catch (error) {
+            console.log(error);
         }
     }
 
@@ -26,9 +43,11 @@ function Tags() {
             <h5>Availabe Tags</h5>
             {tags.map((tag: any, index: number) => {
                 return (
-                    <div key={index} className='tagInfo'>
+                    <div key={index} className='tagInfo' style={{ 'backgroundColor': `${'#' + tag.color}` }}>
                         <p>{tag.name}</p>
-                        <button>remove</button>
+                        <button onClick={() => handleTagRemove(tag.name)}>
+                            <DeleteIcon sx={{ fontSize: 25, color: '#b5739d' }} />
+                        </button>
                     </div>
                 )
             })}
