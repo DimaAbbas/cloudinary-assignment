@@ -5,6 +5,7 @@ import './AssignedPhotos.scss';
 
 function AssignedPhotos() {
     const [tags, setTags] = useState([]);
+    //const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
         getTags();
@@ -22,18 +23,43 @@ function AssignedPhotos() {
         }
     }
 
-    function handlePhotoRemove(photo:any, tagName:any) {
-        console.log(photo + " " + tagName);
+    async function handlePhotoRemove(photoUrl:any, tagName:any) {
+        console.log(photoUrl + " " + tagName);
         try {
             tags.filter(async (tag:any) => {
                 if(tag.name === tagName){
                     let newPhotos = tag.photos;
-                    newPhotos = newPhotos.filter((photo1:any) => {
-                        return photo1 != photo; 
+                    newPhotos = newPhotos.filter((photo:any) => {
+                        return photo != photoUrl; 
                     })
                     const response = await axios.patch(`http://localhost:3004/tags/${tag.id}`, {"photos": newPhotos});
                 }
             })
+        } catch (error) {
+            console.log(error);
+        }
+        try {
+            let response = await axios.get('http://localhost:3004/images');
+            let photos = response.data;
+            //console.log(photos);
+            let photoInfo = photos.filter((photo:any) => {
+                if(photo.url === photoUrl){
+                    return photo;
+                }
+            });
+            let tags = photoInfo[0].tags.filter((tag:any) => {
+                if(tag != tagName){
+                    return tag;
+                }
+            })
+            console.log(tags);
+            try {
+                const response = await axios.patch(`http://localhost:3004/images/${photoInfo[0].id}`, {'tags' : tags});
+                console.log(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+            
         } catch (error) {
             console.log(error);
         }

@@ -67,14 +67,7 @@ function PhotosList() {
     }
 
     function handleAddTag(tagName: any) {
-        if (photoTags.includes(tagName)) {
-            let photoTags_ = photoTags.filter((tag:any) => {
-                return tag != tagName;
-            })
-            console.log(photoTags_);
-            setPhotoTags(photoTags_);
-        }
-        else {
+        if (!photoTags.includes(tagName)) {
             setPhotoTags([...photoTags, tagName]);
             console.log(photoTags);
         }
