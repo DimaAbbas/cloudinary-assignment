@@ -29,11 +29,11 @@ function PhotosList() {
     useEffect(() => {
         getPhotos();
         getTags();
-    });
+    },[]);
 
     async function getPhotoTags(id:any){
         try {
-            const response = await axios.get(`http://localhost:3004/images/${id}`);
+            const response = await axios.get(`http://localhost:4000/images/${id}`);
             if(response){
                 setPhotoTags(response.data.tags);
             }
@@ -44,7 +44,7 @@ function PhotosList() {
 
     async function getPhotos() {
         try {
-            const response = await axios.get(`http://localhost:3004/images`);
+            const response = await axios.get(`http://localhost:4000/images`);
             if (response) {
                 setPhotos(response.data);
                 //console.log(response);
@@ -56,7 +56,7 @@ function PhotosList() {
 
     async function getTags() {
         try {
-            const response = await axios.get('http://localhost:3004/tags');
+            const response = await axios.get('http://localhost:4000/tags');
             if (response) {
                 setTags(response.data);
                 //console.log(response);
@@ -69,23 +69,23 @@ function PhotosList() {
     function handleAddTag(tagName: any) {
         if (!photoTags.includes(tagName)) {
             setPhotoTags([...photoTags, tagName]);
-            console.log(photoTags);
+            //console.log(photoTags);
         }
     }
 
     async function handleApply() {
         tags.map(async (tag: any) => {
-            if (photoTags.includes(tag.name)) {
+            if (photoTags.includes(tag.name) && !tag.photos.includes(url)) {
                 try {
-                    const response = await axios.patch(`http://localhost:3004/tags/${tag.id}`, { 'photos': [...tag.photos, url] });
-                    console.log(response.data);
+                    const response = await axios.patch(`http://localhost:4000/tags/${tag.id}`, { 'photos': [...tag.photos, url] });
+                    //console.log(response.data);
                 } catch (error) {
                     console.log(error);
                 }
             }
         })
         try {
-            const response = await axios.patch(`http://localhost:3004/images/${id}`, {'tags': photoTags});
+            const response = await axios.patch(`http://localhost:4000/images/${id}`, {'tags': photoTags});
             console.log(response)
         } catch (error) {
             console.log(error);

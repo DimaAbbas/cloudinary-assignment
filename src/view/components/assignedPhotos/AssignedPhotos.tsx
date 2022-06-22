@@ -13,7 +13,7 @@ function AssignedPhotos() {
 
     async function getTags() {
         try {
-            const response = await axios.get('http://localhost:3004/tags');
+            const response = await axios.get('http://localhost:4000/tags');
             if (response) {
                 setTags(response.data);
                 //console.log(response);
@@ -32,14 +32,14 @@ function AssignedPhotos() {
                     newPhotos = newPhotos.filter((photo:any) => {
                         return photo != photoUrl; 
                     })
-                    const response = await axios.patch(`http://localhost:3004/tags/${tag.id}`, {"photos": newPhotos});
+                    const response = await axios.patch(`http://localhost:4000/tags/${tag.id}`, {"photos": newPhotos});
                 }
             })
         } catch (error) {
             console.log(error);
         }
         try {
-            let response = await axios.get('http://localhost:3004/images');
+            let response = await axios.get('http://localhost:4000/images');
             let photos = response.data;
             //console.log(photos);
             let photoInfo = photos.filter((photo:any) => {
@@ -54,7 +54,7 @@ function AssignedPhotos() {
             })
             console.log(tags);
             try {
-                const response = await axios.patch(`http://localhost:3004/images/${photoInfo[0].id}`, {'tags' : tags});
+                const response = await axios.patch(`http://localhost:4000/images/${photoInfo[0].id}`, {'tags' : tags});
                 console.log(response.data);
             } catch (error) {
                 console.log(error);

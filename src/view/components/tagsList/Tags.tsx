@@ -8,11 +8,11 @@ function Tags() {
 
     useEffect(() => {
         getTags();
-    }, [tags]);
+    },[]);
 
     async function getTags() {
         try {
-            const response = await axios.get('http://localhost:3004/tags');
+            const response = await axios.get('http://localhost:4000/tags');
             if (response) {
                 setTags(response.data);
                 //console.log(response);
@@ -27,7 +27,7 @@ function Tags() {
         try {
             tags.filter(async (tag: any) => {
                 if (tag.name === tagName) {
-                    const response = await axios.delete(`http://localhost:3004/tags/${tag.id}`);
+                    const response = await axios.delete(`http://localhost:4000/tags/${tag.id}`);
                     if (response) {
                         console.log(response.data);
                     }

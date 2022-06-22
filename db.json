@@ -4,6 +4,77 @@
       "id": 1,
       "url": "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
       "tags": [
+        {
+          "name": "cloud",
+          "color": "40d8ae",
+          "photos": [],
+          "id": 5
+        },
+        {
+          "name": "road",
+          "color": "e9df6c",
+          "photos": [
+            "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
+            "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
+          ],
+          "id": 6
+        },
+        {
+          "name": "camera",
+          "color": "92de3d",
+          "photos": [],
+          "id": 7
+        },
+        {
+          "name": "tea",
+          "color": "6ad2bf",
+          "photos": [],
+          "id": 10
+        },
+        {
+          "name": "book",
+          "color": "07c5c1",
+          "photos": [
+            "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA"
+          ],
+          "id": 12
+        },
+        {
+          "name": "car",
+          "color": "60a1e3",
+          "photos": [],
+          "id": 13
+        },
+        {
+          "name": "tree",
+          "color": "4c32e4",
+          "photos": [
+            "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
+            "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
+            "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
+          ],
+          "id": 14
+        },
+        {
+          "name": "tag10",
+          "color": "bc6378",
+          "photos": [
+            "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
+          ],
+          "id": 15
+        },
+        {
+          "name": "tag20",
+          "color": "d58e03",
+          "photos": [],
+          "id": 16
+        },
+        {
+          "name": "mountains",
+          "color": "a181bf",
+          "photos": [],
+          "id": 17
+        },
         "tree"
       ]
     },
@@ -11,17 +82,14 @@
       "id": 2,
       "url": "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
       "tags": [
-        "road",
-        "tree"
+        "tree",
+        "mountains"
       ]
     },
     {
       "id": 3,
       "url": "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
-      "tags": [
-        "cloud",
-        "tree"
-      ]
+      "tags": []
     },
     {
       "id": 4,
@@ -33,9 +101,7 @@
     {
       "id": 5,
       "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4",
-      "tags": [
-        "tea"
-      ]
+      "tags": []
     },
     {
       "id": 6,
@@ -47,10 +113,7 @@
     {
       "id": 7,
       "url": "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
-      "tags": [
-        "road",
-        "tree"
-      ]
+      "tags": []
     },
     {
       "id": 8,
@@ -74,35 +137,25 @@
     {
       "name": "cloud",
       "color": "40d8ae",
-      "photos": [
-        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U"
-      ],
+      "photos": [],
       "id": 5
     },
     {
       "name": "road",
       "color": "e9df6c",
-      "photos": [
-        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
-        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
-        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
-      ],
+      "photos": [],
       "id": 6
     },
     {
       "name": "camera",
       "color": "92de3d",
-      "photos": [
-        "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU"
-      ],
+      "photos": [],
       "id": 7
     },
     {
       "name": "tea",
       "color": "6ad2bf",
-      "photos": [
-        "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
-      ],
+      "photos": [],
       "id": 10
     },
     {
@@ -116,10 +169,39 @@
     {
       "name": "car",
       "color": "60a1e3",
-      "photos": [
-        "https://i.picsum.photos/id/1072/536/354.jpg?hmac=XK9PQuG5aq-UDkAXJUgmpkv2lfcAh0sAFartipNOF1o"
-      ],
+      "photos": [],
       "id": 13
+    },
+    {
+      "name": "tree",
+      "color": "4c32e4",
+      "photos": [
+        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+      ],
+      "id": 14
+    },
+    {
+      "name": "tag10",
+      "color": "bc6378",
+      "photos": [
+        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
+      ],
+      "id": 15
+    },
+    {
+      "name": "tag20",
+      "color": "d58e03",
+      "photos": [],
+      "id": 16
+    },
+    {
+      "name": "mountains",
+      "color": "a181bf",
+      "photos": [
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+      ],
+      "id": 17
     }
   ]
 }

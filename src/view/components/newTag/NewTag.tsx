@@ -9,10 +9,8 @@ function NewTag() {
 
     const addTag = () => {
         try {
-            const response = axios.post('http://localhost:3004/tags', {"name" : input, "color": Math.random().toString(16).substr(-6), "photos": []});
+            const response = axios.post('http://localhost:4000/tags', {"name" : input, "color": Math.random().toString(16).substr(-6), "photos": []});
             setInput("");
-            // if(response){
-            //     console.log(response);
             // }
         } catch (error) {
             console.log(error);
