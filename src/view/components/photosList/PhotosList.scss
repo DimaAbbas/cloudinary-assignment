@@ -1,9 +1,7 @@
 .PhotosList {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, 1fr);
-    width: 90%;
-    height: 90%;
+    //grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -19,8 +17,38 @@
         }
     }
 
+    img:hover{
+        opacity: 0.6;
+    }
 
     img:active {
         transform: scale(0.8);
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .PhotosList {
+        grid-template-columns: repeat(5, auto);
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .PhotosList {
+        grid-template-columns: repeat(4, auto);
+        overflow-y: scroll;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .PhotosList {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+@media only screen and (max-width:800px) {
+    .PhotosList {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media only screen and (max-width:600px) {
+    .PhotosList {
+        grid-template-columns: repeat(1, auto);
     }
 }

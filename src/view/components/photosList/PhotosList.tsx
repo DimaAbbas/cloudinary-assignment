@@ -1,75 +1,92 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import './PhotosList.scss';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 function PhotosList() {
     const [photos, setPhotos] = useState([]);
     const [tags, setTags] = useState([]);
-    const [anchorEl, setAnchorEl] = useState(null);
+    //state retain all tags the user chooses them for the clicked photo
     const [photoTags, setPhotoTags] = useState(Array<String>);
+    //states retain specific information for the clicked photo
     const [url, setUrl] = useState("");
     const [id, setId] = useState(0);
-    const open = Boolean(anchorEl);
+    //
+    //for Dialog
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const [open, setOpen] = useState(false);
 
-    const handleClick = (event: any, photo:any) => {
-        //setPhotoTags([]);
+    const handleClick = (photo: any) => {
+        getPhotoTags(photo.id);
         setId(photo.id);
         setUrl(photo.url);
-        getPhotoTags(photo.id);
-        setAnchorEl(event.currentTarget);
+        setOpen(true);
     };
 
     const handleClose = () => {
-        setAnchorEl(null);
+        setOpen(false);
         setPhotoTags([]);
     };
 
     useEffect(() => {
         getPhotos();
         getTags();
-    },[]);
+    },[photoTags]);
 
-    async function getPhotoTags(id:any){
+    
+    function getPhotoTags(id: any) {
+        let photoInfo:any = photos[id-1];
+        let tags_ = photoInfo.tags;
+        setPhotoTags(tags_);
+    }
+
+    async function getPhotos() {
         try {
-            const response = await axios.get(`http://localhost:4000/images/${id}`);
-            if(response){
-                setPhotoTags(response.data.tags);
-            }
+            axios.get('http://localhost:4000/images').then(response => {
+                const data = response.data;
+                setPhotos(data);
+            })
         } catch (error) {
             console.log(error);
         }
     }
 
-    async function getPhotos() {
-        try {
-            const response = await axios.get(`http://localhost:4000/images`);
-            if (response) {
-                setPhotos(response.data);
-                //console.log(response);
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
     async function getTags() {
         try {
-            const response = await axios.get('http://localhost:4000/tags');
-            if (response) {
-                setTags(response.data);
-                //console.log(response);
-            }
+            axios.get('http://localhost:4000/tags').then(response => {
+                const data = response.data;
+                setTags(data);
+            })
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
     function handleAddTag(tagName: any) {
         if (!photoTags.includes(tagName)) {
+            //console.log("yes2");
             setPhotoTags([...photoTags, tagName]);
             //console.log(photoTags);
+        }
+        let photoInfo:any = photos[id-1];
+        let tags_ = photoInfo.tags;
+        if(photoTags.includes(tagName) && !tags_.includes(tagName)){
+            //console.log("yes1");
+            let newTags = photoTags.filter((tag:any) => {
+                if(tag != tagName){
+                    return tag;
+                }
+            });
+            setPhotoTags(newTags);
         }
     }
 
@@ -85,43 +102,58 @@ function PhotosList() {
             }
         })
         try {
-            const response = await axios.patch(`http://localhost:4000/images/${id}`, {'tags': photoTags});
-            console.log(response)
+            const response = await axios.patch(`http://localhost:4000/images/${id}`, { 'tags': photoTags });
+            //console.log(response)
         } catch (error) {
             console.log(error);
         }
     }
 
     return (
-
         <div className='PhotosList'>
             {photos.map((photo: any, index: number) => {
                 return (
                     <div key={index} className='photo'>
-                        <img src={photo.url} alt="hi" aria-controls={open ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                            onClick={(ev:any)=> handleClick(ev, photo)} />
-                        <Menu
-                            id="basic-menu"
-                            anchorEl={anchorEl}
+                        <img src={photo.url} alt="hi"
+                            onClick={(ev: any) => handleClick(photo)} />
+                        <Dialog
+                            fullScreen={fullScreen}
                             open={open}
                             onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                            sx={{ height: '400px', overflowY: 'scroll' }}
+                            aria-labelledby="responsive-dialog-title"
                         >
-                            {tags.map((tag: any, index: number) => {
-                                return (
-                                    <MenuItem key={index} sx={{ 'backgroundColor': photoTags.includes(tag.name) ? `${'#' + tag.color}` : 'white' }}
-                                        onClick={() => handleAddTag(tag.name)}>
-                                        {tag.name}
-                                    </MenuItem>
-                                );
-                            })}
-                            <button style={{marginLeft:'23%'}} onClick={() => { handleClose(); handleApply() }}>Apply</button>
-                        </Menu>
+                            <DialogContent style={{ fontStyle: 'italic'}}>
+                                <CloseIcon sx={{'border': '0px solid black'}} onClick={handleClose}/>
+                                <DialogTitle id="responsive-dialog-title">
+                                    {"Choose tags for this photo..."}
+                                </DialogTitle>
+                                <img src={url} alt="" style={{width: '50%', height: '100px', marginLeft: 'auto', marginRight:'auto', display: 'block'}}/>
+                                <br />
+                                <br />
+                                <Box sx={{ width: 1 }}>
+                                    <Box className='grid' display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2}>
+                                        {tags.map((tag: any, index: number) => {
+                                            return (
+                                                <Box className='tag' key={index} 
+                                                    style={{ 'backgroundColor': photoTags.includes(tag.name) ? `${'#' + tag.color}` : 'white', 'border': `2px dotted ${'#' + tag.color}`,
+                                                             textAlign: 'center', fontSize: '0.8rem', height: '20px', borderRadius: '10px' }}
+                                                    onClick={() => handleAddTag(tag.name)}>
+                                                    {tag.name}
+                                                </Box>
+                                            );
+                                        })}
+                                    </Box>
+                                </Box>
+                                <br />
+                                <DialogActions>
+                                    <button className='apply' onClick={() => { handleClose(); handleApply() }} 
+                                        style={{width:'90px', height:'35px', margin:'auto', backgroundColor: '#d7e8fb', border: 'none'
+                                                , borderRadius:'15px' , fontStyle: 'italic', fontWeight: 'bold'}}>
+                                        Apply
+                                    </button>
+                                </DialogActions>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 );
             })}

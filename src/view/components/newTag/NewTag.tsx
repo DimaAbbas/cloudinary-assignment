@@ -1,15 +1,18 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './NewTag.scss';
+
 //choose random color for each new tag --> Math.random().toString(16).substr(-6)
 
 function NewTag() {
 
+    //input -> a state retains the text written by the user
     const [input, setInput] = useState("");
 
+    //Add a new tag to the TAGS table by POST
     const addTag = () => {
         try {
-            const response = axios.post('http://localhost:4000/tags', {"name" : input, "color": Math.random().toString(16).substr(-6), "photos": []});
+            axios.post('http://localhost:4000/tags', {"name" : input, "color": Math.random().toString(16).substr(-6), "photos": []});
             setInput("");
             // }
         } catch (error) {

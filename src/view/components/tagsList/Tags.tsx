@@ -1,32 +1,30 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import './Tags.scss';
 
 function Tags() {
+    //a state retains all the available tags in TAGS TABLE(json-server)
     const [tags, setTags] = useState([]);
 
     useEffect(() => {
-        getTags();
-    },[]);
-
-    async function getTags() {
         try {
-            const response = await axios.get('http://localhost:4000/tags');
-            if (response) {
-                setTags(response.data);
-                //console.log(response);
-            }
+            axios.get('http://localhost:4000/tags').then(response => {
+                const data = response.data;
+                setTags(data);
+            })
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-    }
+    }, []);
 
     function handleTagRemove(tagName: any) {
-        console.log(tagName);
+        //console.log(tagName);
         try {
+            //Search for the tag by its name using the filter method to get its ID
             tags.filter(async (tag: any) => {
                 if (tag.name === tagName) {
+                    // AND then delete the tag from TAGS table by its ID
                     const response = await axios.delete(`http://localhost:4000/tags/${tag.id}`);
                     if (response) {
                         console.log(response.data);
@@ -40,14 +38,12 @@ function Tags() {
 
     return (
         <div className='Tags'>
-            <h5>Availabe Tags</h5>
+            <h4>Availabe Tags</h4>
             {tags.map((tag: any, index: number) => {
                 return (
                     <div key={index} className='tagInfo' style={{ 'backgroundColor': `${'#' + tag.color}` }}>
                         <p>{tag.name}</p>
-                        <button onClick={() => handleTagRemove(tag.name)}>
-                            <DeleteIcon sx={{ fontSize: 25, color: '#b5739d' }} />
-                        </button>
+                        <DeleteOutlineIcon sx={{ fontSize: 25 }} onClick={() => handleTagRemove(tag.name)} />
                     </div>
                 )
             })}

@@ -1,30 +1,24 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import './AssignedPhotos.scss';
 
 function AssignedPhotos() {
     const [tags, setTags] = useState([]);
-    //const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
-        getTags();
+        try {
+            axios.get('http://localhost:4000/tags').then(response => {
+                const data = response.data;
+                setTags(data);
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }, [tags]);
 
-    async function getTags() {
-        try {
-            const response = await axios.get('http://localhost:4000/tags');
-            if (response) {
-                setTags(response.data);
-                //console.log(response);
-            }
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
     async function handlePhotoRemove(photoUrl:any, tagName:any) {
-        console.log(photoUrl + " " + tagName);
+        //console.log(photoUrl + " " + tagName);
         try {
             tags.filter(async (tag:any) => {
                 if(tag.name === tagName){
@@ -69,7 +63,7 @@ function AssignedPhotos() {
         <div className='AssignedPhotos'>
             {tags.map((tag: any, index: number) => {
                 return (
-                    <div key={index} className='tagBox'>
+                    <div key={index} className='tagBox' style={{border: `2px solid ${"#" + tag.color}`}}>
                         <div className='tagName' style={{ "backgroundColor": `${"#" + tag.color}` }}>
                             <p>{tag.name}</p>
                         </div>
@@ -78,7 +72,7 @@ function AssignedPhotos() {
                                 return (
                                     <div key={index_} className='photo'>
                                         <img src={photo} alt="" />
-                                        <DeleteIcon sx={{ fontSize: 30, color: '#b5739d' }} onClick={() => handlePhotoRemove(photo, tag.name)} />
+                                        <DeleteOutlineIcon sx={{ fontSize: 30 }} onClick={() => handlePhotoRemove(photo, tag.name)} />
                                     </div>
                                 )
                             })}
