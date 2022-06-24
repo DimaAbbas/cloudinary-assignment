@@ -137,20 +137,6 @@
         "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
       ],
       "id": 17
-    },
-    {
-      "name": "sea",
-      "color": "98796b",
-      "photos": [
-        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
-      ],
-      "id": 18
-    },
-    {
-      "name": "tag10",
-      "color": "b4ad98",
-      "photos": [],
-      "id": 19
     }
   ]
 }

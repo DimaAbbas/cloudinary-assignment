@@ -25,6 +25,9 @@ function PhotosList() {
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
     const [open, setOpen] = useState(false);
 
+    //Each time clicked on certain photo, 
+    //it will be updated the id, photoTags and url states 
+    //and the popup will opened to choose the tags for this photo
     const handleClick = (photo: any) => {
         getPhotoTags(photo.id);
         setId(photo.id);
@@ -32,6 +35,7 @@ function PhotosList() {
         setOpen(true);
     };
 
+    //close the popup 
     const handleClose = () => {
         setOpen(false);
         setPhotoTags([]);
@@ -42,13 +46,15 @@ function PhotosList() {
         getTags();
     },[photoTags]);
 
-    
+    //get all tags from photos state by the photo id
+    //and then update the photoTags state
     function getPhotoTags(id: any) {
         let photoInfo:any = photos[id-1];
         let tags_ = photoInfo.tags;
         setPhotoTags(tags_);
     }
 
+    //get all the saved photos in db.json
     async function getPhotos() {
         try {
             axios.get('http://localhost:4000/images').then(response => {
@@ -60,6 +66,7 @@ function PhotosList() {
         }
     }
 
+    //get all the saved tags in db.json
     async function getTags() {
         try {
             axios.get('http://localhost:4000/tags').then(response => {
@@ -71,7 +78,9 @@ function PhotosList() {
         }
     }
 
+    //Each time a user selects a tag for a photo, that tag will be added to photoTags state
     function handleAddTag(tagName: any) {
+        //add a tag that not assigned for this photo
         if (!photoTags.includes(tagName)) {
             //console.log("yes2");
             setPhotoTags([...photoTags, tagName]);
@@ -79,6 +88,8 @@ function PhotosList() {
         }
         let photoInfo:any = photos[id-1];
         let tags_ = photoInfo.tags;
+
+        //remove a tag that assigned for this photo
         if(photoTags.includes(tagName) && !tags_.includes(tagName)){
             //console.log("yes1");
             let newTags = photoTags.filter((tag:any) => {
@@ -90,11 +101,12 @@ function PhotosList() {
         }
     }
 
-    async function handleApply() {
-        tags.map(async (tag: any) => {
+    //Update both tables after selecting the tag for a particular photo
+    function handleApply() {
+        tags.map((tag: any) => {
             if (photoTags.includes(tag.name) && !tag.photos.includes(url)) {
                 try {
-                    const response = await axios.patch(`http://localhost:4000/tags/${tag.id}`, { 'photos': [...tag.photos, url] });
+                    axios.patch(`http://localhost:4000/tags/${tag.id}`, { 'photos': [...tag.photos, url] });
                     //console.log(response.data);
                 } catch (error) {
                     console.log(error);
@@ -102,7 +114,7 @@ function PhotosList() {
             }
         })
         try {
-            const response = await axios.patch(`http://localhost:4000/images/${id}`, { 'tags': photoTags });
+            axios.patch(`http://localhost:4000/images/${id}`, { 'tags': photoTags });
             //console.log(response)
         } catch (error) {
             console.log(error);

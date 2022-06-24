@@ -17,6 +17,8 @@ function AssignedPhotos() {
         }
     }, [tags]);
 
+    //unassigned the tag with the tagName to the photo with the photoUrl
+    //After clicking the delete button of a particular photo in the tag box
     async function handlePhotoRemove(photoUrl:any, tagName:any) {
         //console.log(photoUrl + " " + tagName);
         try {
@@ -26,7 +28,7 @@ function AssignedPhotos() {
                     newPhotos = newPhotos.filter((photo:any) => {
                         return photo != photoUrl; 
                     })
-                    const response = await axios.patch(`http://localhost:4000/tags/${tag.id}`, {"photos": newPhotos});
+                    axios.patch(`http://localhost:4000/tags/${tag.id}`, {"photos": newPhotos});
                 }
             })
         } catch (error) {
@@ -46,7 +48,7 @@ function AssignedPhotos() {
                     return tag;
                 }
             })
-            console.log(tags);
+            //console.log(tags);
             try {
                 const response = await axios.patch(`http://localhost:4000/images/${photoInfo[0].id}`, {'tags' : tags});
                 console.log(response.data);

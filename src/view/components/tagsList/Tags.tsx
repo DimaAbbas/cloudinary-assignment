@@ -16,7 +16,7 @@ function Tags() {
         } catch (error) {
             console.log(error);
         }
-    }, []);
+    }, [tags]);
 
     function handleTagRemove(tagName: any) {
         //console.log(tagName);
