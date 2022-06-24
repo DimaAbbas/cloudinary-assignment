@@ -5,7 +5,7 @@ The user can be add a new tag and delete a tag.
 - Coding language : Javascript/Typescript
 - Enviroment : Visual studio code
 
-##Installation and Setup Instructions
+## Installation and Setup Instructions
 Clone down this repository. You will need node and npm installed globally on your machine.
 
 Installation:
@@ -21,7 +21,7 @@ npm install -g json-server
 //Running the server on port 4000
 npx json-server --watch -p 4000 db.json
 
-##Explanation 
+## Explanation 
 
 
 
