@@ -30,7 +30,7 @@ Setting up the JSON Server:
 * All tags are displayed to the user in list of available tags, so each tag is displayed in its own box with its name and color.
 * The user can assign one or more tags to each photo, and this is by clicking on the image itself, and then a popup window will be displayed to the user showing all the available tags.
 The user selects the tags he wants to assign to this photo and then clicks an apply button.
-*All available tags are each displayed in its own box with all the photos assigned to it.
+* All available tags are each displayed in its own box with all the photos assigned to it.
 Each photo can be deleted from the tag box and then this photo will not be assigned to this tag.
 
 
