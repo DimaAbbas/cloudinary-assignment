@@ -18,7 +18,7 @@ function Tags() {
         }
     }, [tags]);
 
-    function handleTagRemove(tagName: any) {
+    async function handleTagRemove(tagName: any) {
         //console.log(tagName);
         try {
             //Search for the tag by its name using the filter method to get its ID
@@ -33,6 +33,26 @@ function Tags() {
             });
         } catch (error) {
             console.log(error);
+        }
+
+        try {
+            const response = await axios.get('http://localhost:4000/images');
+            const photos = response.data;
+            photos.map((photo:any) => {
+                let newTags = photo.tags.filter((tag:any) => {
+                    if(tag !== tagName){
+                        return tag
+                    }
+                });
+                console.log(newTags);
+                try {
+                    axios.patch(`http://localhost:4000/images/${photo.id}`, {"tags" : newTags});
+                } catch (error) {
+                    console.log(error);
+                }
+            })
+        } catch (error) {
+           console.log(error); 
         }
     }
 

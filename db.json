@@ -7,7 +7,6 @@
         "road",
         "tree",
         "sea",
-        "mountains",
         "cloud"
       ]
     },
@@ -17,7 +16,8 @@
       "tags": [
         "road",
         "mountains",
-        "tree"
+        "tree",
+        "cloud"
       ]
     },
     {
@@ -25,8 +25,7 @@
       "url": "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
       "tags": [
         "cloud",
-        "tree",
-        "mountains"
+        "tree"
       ]
     },
     {
@@ -40,7 +39,6 @@
       "id": 5,
       "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4",
       "tags": [
-        "tea",
         "flower"
       ]
     },
@@ -57,8 +55,7 @@
       "tags": [
         "road",
         "tree",
-        "cloud",
-        "mountains"
+        "cloud"
       ]
     },
     {
@@ -71,7 +68,9 @@
     {
       "id": 9,
       "url": "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA",
-      "tags": []
+      "tags": [
+        "book"
+      ]
     },
     {
       "id": 10,
@@ -87,7 +86,8 @@
         "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
         "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
         "https://i.picsum.photos/id/1028/536/354.jpg?hmac=iEDY4oPIUfc9-V66B4UopLvMOW8P1RKKhDT72mtsHqM",
-        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
+        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
       ],
       "id": 5
     },
@@ -110,17 +110,11 @@
       "id": 7
     },
     {
-      "name": "tea",
-      "color": "6ad2bf",
-      "photos": [
-        "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
-      ],
-      "id": 10
-    },
-    {
       "name": "book",
       "color": "07c5c1",
-      "photos": [],
+      "photos": [
+        "https://i.picsum.photos/id/24/536/354.jpg?hmac=f6siW5Q99KYsbHTTZeVu0INJNzEV0-3y2Xg9MVlR-SA"
+      ],
       "id": 12
     },
     {
@@ -141,25 +135,6 @@
         "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
       ],
       "id": 14
-    },
-    {
-      "name": "mountains",
-      "color": "a181bf",
-      "photos": [
-        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
-        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
-        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
-        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
-      ],
-      "id": 17
-    },
-    {
-      "name": "flower",
-      "color": "26c422",
-      "photos": [
-        "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
-      ],
-      "id": 18
     }
   ]
 }
