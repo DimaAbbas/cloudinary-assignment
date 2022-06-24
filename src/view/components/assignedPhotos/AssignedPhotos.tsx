@@ -50,8 +50,8 @@ function AssignedPhotos() {
             })
             //console.log(tags);
             try {
-                const response = await axios.patch(`http://localhost:4000/images/${photoInfo[0].id}`, {'tags' : tags});
-                console.log(response.data);
+                axios.patch(`http://localhost:4000/images/${photoInfo[0].id}`, {'tags' : tags});
+                //console.log(response.data);
             } catch (error) {
                 console.log(error);
             }

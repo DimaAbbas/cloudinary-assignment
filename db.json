@@ -24,40 +24,49 @@
       "id": 3,
       "url": "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
       "tags": [
-        "road"
+        "cloud",
+        "tree",
+        "mountains"
       ]
     },
     {
       "id": 4,
       "url": "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU",
       "tags": [
-        "camera",
-        "book"
+        "camera"
       ]
     },
     {
       "id": 5,
       "url": "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4",
       "tags": [
-        "tea"
+        "tea",
+        "flower"
       ]
     },
     {
       "id": 6,
       "url": "https://i.picsum.photos/id/1072/536/354.jpg?hmac=XK9PQuG5aq-UDkAXJUgmpkv2lfcAh0sAFartipNOF1o",
-      "tags": []
+      "tags": [
+        "car"
+      ]
     },
     {
       "id": 7,
       "url": "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
       "tags": [
-        "road"
+        "road",
+        "tree",
+        "cloud",
+        "mountains"
       ]
     },
     {
       "id": 8,
       "url": "https://i.picsum.photos/id/1028/536/354.jpg?hmac=iEDY4oPIUfc9-V66B4UopLvMOW8P1RKKhDT72mtsHqM",
-      "tags": []
+      "tags": [
+        "cloud"
+      ]
     },
     {
       "id": 9,
@@ -75,7 +84,10 @@
       "name": "cloud",
       "color": "40d8ae",
       "photos": [
-        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY"
+        "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
+        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
+        "https://i.picsum.photos/id/1028/536/354.jpg?hmac=iEDY4oPIUfc9-V66B4UopLvMOW8P1RKKhDT72mtsHqM",
+        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
       ],
       "id": 5
     },
@@ -85,8 +97,7 @@
       "photos": [
         "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
         "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
-        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ",
-        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U"
+        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
       ],
       "id": 6
     },
@@ -109,15 +120,15 @@
     {
       "name": "book",
       "color": "07c5c1",
-      "photos": [
-        "https://i.picsum.photos/id/319/536/354.jpg?hmac=ZzEILWavlsP9MWDCsCqQp3fxsbmTD48rzZWY5c57IPU"
-      ],
+      "photos": [],
       "id": 12
     },
     {
       "name": "car",
       "color": "60a1e3",
-      "photos": [],
+      "photos": [
+        "https://i.picsum.photos/id/1072/536/354.jpg?hmac=XK9PQuG5aq-UDkAXJUgmpkv2lfcAh0sAFartipNOF1o"
+      ],
       "id": 13
     },
     {
@@ -125,7 +136,9 @@
       "color": "4c32e4",
       "photos": [
         "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
-        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
+        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
+        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
       ],
       "id": 14
     },
@@ -134,9 +147,19 @@
       "color": "a181bf",
       "photos": [
         "https://i.picsum.photos/id/879/536/354.jpg?hmac=DHlAvQ-DPSPs6YaodJBSc3a9sVFzvTqygKTW1cTbFFY",
-        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE"
+        "https://i.picsum.photos/id/204/536/354.jpg?hmac=snZIgqenag_pWqyhXX7PzRmag1UZ2SvMcP2YQ_m6KhE",
+        "https://i.picsum.photos/id/932/536/354.jpg?hmac=Rd2DUoI6aXKUNMI4ndHOqQyINA1EJX7U-o3k4q-H95U",
+        "https://i.picsum.photos/id/772/536/354.jpg?hmac=38B75EbsaQHn52_ldOKpyXApyB-7lFVnhSdzbmcSiIQ"
       ],
       "id": 17
+    },
+    {
+      "name": "flower",
+      "color": "26c422",
+      "photos": [
+        "https://i.picsum.photos/id/225/536/354.jpg?hmac=M3E-brS0Ev6EcbVGU1fuhc6Ns7KEYnB20gOOreApFe4"
+      ],
+      "id": 18
     }
   ]
 }

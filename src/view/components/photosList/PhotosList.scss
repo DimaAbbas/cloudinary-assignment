@@ -52,3 +52,14 @@
         grid-template-columns: repeat(1, auto);
     }
 }
+
+.PhotosList::-webkit-scrollbar {
+    width: 3px;
+}
+
+.PhotosList::-webkit-scrollbar-thumb {
+    background: #8f8f8f70;
+    border-radius: 20px;
+}
+
+
