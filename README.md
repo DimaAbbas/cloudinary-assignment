@@ -26,7 +26,10 @@ Setting up the JSON Server:
 
 ## Explanation 
 
-
+* The user can add a new tag that does not exist, for each new tag there is a name and color.
+* All tags are displayed to the user in list of available tags, so each tag is displayed in its own box with its name and color.
+* The user can assign one or more tags to each photo, and this is by clicking on the image itself, and then a popup window will be displayed to the user showing all the available tags.
+The user selects the tags he wants to assign to this photo and then clicks an apply button.
 
 
 
