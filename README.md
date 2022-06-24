@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Cloudonary Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A client-side app built with React, show a grid of photos and allow the user to assign for each photo one or more tags.
+The user can be add a new tag and delete a tag.
+- Coding language : Javascript/Typescript
+- Enviroment : Visual studio code
 
-## Available Scripts
+## Installation and Setup Instructions
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-In the project directory, you can run:
+Installation:
 
-### `npm start`
+1.npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Setting up the JSON Server:
 
-### `npm test`
+//Installing React JSON-server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--> npm install -g json-server
 
-### `npm run build`
+//Running the server on port 4000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--> npx json-server --watch -p 4000 db.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Explanation 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* The user can add a new tag that does not exist, for each new tag there is a name and color.
+* All tags are displayed to the user in list of available tags, so each tag is displayed in its own box with its name and color.
+* The user can assign one or more tags to each photo, and this is by clicking on the image itself, and then a popup window will be displayed to the user showing all the available tags.
+The user selects the tags he wants to assign to this photo and then clicks an apply button.
+* All available tags are each displayed in its own box with all the photos assigned to it.
+Each photo can be deleted from the tag box and then this photo will not be assigned to this tag.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
