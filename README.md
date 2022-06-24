@@ -18,11 +18,11 @@ Setting up the JSON Server:
 
 //Installing React JSON-server
 
-npm install -g json-server
+--> npm install -g json-server
 
 //Running the server on port 4000
 
-npx json-server --watch -p 4000 db.json
+--> npx json-server --watch -p 4000 db.json
 
 ## Explanation 
 
