@@ -6,15 +6,18 @@ The user can be add a new tag and delete a tag.
 - Enviroment : Visual studio code
 
 ## Installation and Setup Instructions
-Clone down this repository. You will need node and npm installed globally on your machine.
+- Clone the repo in your terminal by clicking the _green_ clone or download button at the top right and copyin the url
 
-Installation:
+- In your terminal, type ```git clone URL```
 
-1.npm install
+  - replace URL with the url you copied
+  - hit enter
+ 
+- This will copy all the files from this repo down to your computer
 
-2.npm start
+- In your terminal, cd into the directory you just created
 
-Setting up the JSON Server:
+- Setting up the JSON Server:
 
 //Installing React JSON-server
 
@@ -23,6 +26,13 @@ Setting up the JSON Server:
 //Running the server on port 4000
 
 --> npx json-server --watch -p 4000 db.json
+
+- Type ```npm install``` to install all dependencies
+
+- Last, but not least, type ```npm start``` to run the app locally.
+
+- To visit the app  ```http://localhost:3000```
+
 
 ## Explanation 
 
