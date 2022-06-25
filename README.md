@@ -19,9 +19,9 @@ The user can be add a new tag and delete a tag.
 
 - Setting up the JSON Server:
 
-   - Installing React JSON-server ```npm install -g json-server```
+   - Type ```npm install -g json-server``` to installing React JSON-server 
 
-   - Running the server on port 4000 ```npx json-server --watch -p 4000 db.json```
+   - Type ```npx json-server --watch -p 4000 db.json``` to running the server on port 4000 
 
 - Type ```npm install``` to install all dependencies
 
