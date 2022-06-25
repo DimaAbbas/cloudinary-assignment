@@ -1,4 +1,4 @@
-# Cloudonary Assignment
+# Cloudinary Assignment
 
 A client-side app built with React, show a grid of photos and allow the user to assign for each photo one or more tags.
 The user can be add a new tag and delete a tag.
@@ -12,7 +12,7 @@ Installation:
 
 1.npm install
 
-2. npm start
+2.npm start
 
 Setting up the JSON Server:
 
